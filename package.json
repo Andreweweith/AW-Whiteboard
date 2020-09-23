@@ -1,0 +1,57 @@
+{
+  "name": "whiteboard",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.9.4",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.45",
+    "@material-ui/styles": "^4.9.0",
+    "@material-ui/system": "^4.9.3",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "body-parser": "latest",
+    "cors": "^2.8.5",
+    "email-validator": "^2.0.4",
+    "express": "latest",
+    "mongoose": "^5.9.7",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0",
+    "typeface-roboto": "0.0.75",
+    "validator": "^13.0.0"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "bcrypt": "^4.0.1",
+    "clsx": "^1.1.0",
+    "dotenv": "^8.2.0",
+    "node-sass": "^4.13.1",
+    "prop-types": "^15.7.2",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-app-rewired": "^2.1.6",
+    "typescript": "^3.8.3"
+  }
+}

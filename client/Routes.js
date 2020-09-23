@@ -1,4 +1,3 @@
-/* Created and written by Andrew Weith */
 /* Based on code and information from tutorial found at https://serverless-stack.com/chapters/handle-routes-with-react-router.html */
 
 import React from "react";

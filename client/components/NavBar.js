@@ -1,5 +1,4 @@
-/* Created and written by Andrew Weith */
-/* Build using example code available at https://material-ui.com/ */
+/* Built using example code available at https://material-ui.com/ */
 
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'

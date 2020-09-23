@@ -1,5 +1,3 @@
-/* Created and written by Connor Walsh { start } ---------> */
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -19,8 +17,6 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@wh
     .catch(error => {
         console.log(error)
     });
-
-/* Schemas written by Connor Walsh, designed in part with Alec Comley and Andrew Weith */
 
 const userSchema = mongoose.Schema({
 
@@ -100,6 +96,8 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 
+/* Contributed by Connor Walsh { start } ---------> */
+
 app.post("/signup/", async (req, res) => {
     try {
         req.body.password = bcrypt.hashSync(req.body.password, 10);
@@ -143,11 +141,19 @@ app.post("/pullmessages/", async (req, res) => {
     }
 });
 
+
+
+const port = process.env.PORT || 4000;
+
+app.listen(port, () => {
+    console.log('Server listening on ' + port);
+})
+
 /* <--------- { end } Contributed by Connor Walsh */
 
 
 
-/* Code used from project found at https://github.com/bitlabstudio/blogpost-react-websocket-chat ------> */
+/* Code below used from project found at https://github.com/bitlabstudio/blogpost-react-websocket-chat ------> */
 
 const wss = new WebSocket.Server({ port: 3030 });
 wss.on('connection', function connection(ws) {
@@ -159,17 +165,3 @@ wss.on('connection', function connection(ws) {
         });
     });
 });
-
-/* <------ */
-
-
-
-/* Contributed by Connor Walsh { start } ---------> */
-
-const port = process.env.PORT || 4000;
-
-app.listen(port, () => {
-    console.log('Server listening on ' + port);
-})
-
-/*<--------- { end } Contributed by Connor Walsh */

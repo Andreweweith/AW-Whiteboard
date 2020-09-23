@@ -1,5 +1,3 @@
-/* Created and written by Andrew Weith, with contributions from Connor Walsh and Alec Comley */
-
 import React, { useState } from 'react';
 import Paper from '@material-ui/core/Paper';
 import Grey from "@material-ui/core/colors/grey";
@@ -99,8 +97,6 @@ function LoginWindow(props) {
         return email.length > 0 && password.length > 0;
     }
 
-    /* Contributed by Connor Walsh { start } ---------> */
-
     function push(user)
     {
         if(user)
@@ -108,7 +104,6 @@ function LoginWindow(props) {
             setStateName(user.name);
             setStateUserEmail(user.email);
 
-            /* Contributed by Alec Comley { start } ---------> */
             if (validator.validate(user.email)){
                 console.log("valid email")
                 setStateIsAuthenticated(true);
@@ -117,7 +112,7 @@ function LoginWindow(props) {
             else {
                 console.log("invalid email");
             }
-            /* <--------- { end } Contributed by Alec Comley */
+
         }
         else {
             document.getElementById("email").setAttribute("error", "");
@@ -149,7 +144,6 @@ function LoginWindow(props) {
         }
     }
 
-    /* <--------- { end } Contributed by Connor Walsh */
 
     function handleChange(event) {
         setEmail(event.target.value);

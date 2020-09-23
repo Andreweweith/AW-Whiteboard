@@ -1,5 +1,3 @@
-/* Created and written by Andrew Weith, with contributions from Connor Walsh and Alec Comley */
-
 import React, { useState } from 'react';
 import Paper from '@material-ui/core/Paper';
 import Grey from "@material-ui/core/colors/grey";
@@ -112,11 +110,8 @@ function SignupWindow(props) {
         return email.length > 0 && password.length > 0;
     }
 
-    /* Contributed by Connor Walsh { start } ---------> */
-
     function check(text)
     {
-        /* Contributed by Alec Comley { start } ---------> */
         if (validator.validate(email)){
             console.log("valid email")
             props.history.push("/login");
@@ -124,7 +119,6 @@ function SignupWindow(props) {
         else{
             console.log("invalid email")
         }
-        /* <------- { end } Contributed by Alec Comley */
     }
 
     function handleSubmit(event) {
@@ -151,8 +145,6 @@ function SignupWindow(props) {
 
         }
     }
-
-    /* <--------- { end } Contributed by Connor Walsh */
 
     function handleChange(event) {
 

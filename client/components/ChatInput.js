@@ -1,5 +1,3 @@
-/* Styled and modified by Andrew Weith */
-
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import TextField from "@material-ui/core/TextField";

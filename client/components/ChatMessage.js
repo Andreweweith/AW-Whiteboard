@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-/* Modified by Alec Comley */
+/* Modification contributed by Alec Comley */
 
 const output = ":";
 

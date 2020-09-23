@@ -1,4 +1,3 @@
-/* Created and written by Andrew Weith */
 /* Used snippets of code for theming available at https://material-ui.com/ and for React Context from https://serverless-stack.com/ */
 
 import React, { useState } from 'react';

@@ -1,6 +1,4 @@
 /* Class component used from project found at https://github.com/bitlabstudio/blogpost-react-websocket-chat */
-/* Modified by Andrew Weith to include styling and function to meet the needs of our application */
-
 import React, { Component } from 'react'
 import ChatInput from '../components/ChatInput';
 import ChatMessage from '../components/ChatMessage'
@@ -164,8 +162,6 @@ class ChatWindow extends Component {
             this.state.name = finalName[0];
 
             /* ************************************************************************************* */
-            /* This pullmessages segment was contributed by Connor Walsh, unused in final presentation
-            * as it is not fully functional within the application in time for presentation. */
 
             /*fetch("http://localhost:4000/pullmessages/", {
                 method: 'POST'

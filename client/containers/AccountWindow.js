@@ -95,9 +95,6 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-/* Created and written by Alec Comley */
-/* Using styling and React Context code segments contributed by Andrew Weith */
-
 function AccountWindow(props) {
 
     const classes = useStyles();

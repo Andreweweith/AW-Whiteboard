@@ -1,8 +1,64 @@
-Whiteboard App by Connor Walsh, Andrew Weith, and Alec Comley.
+# **Whiteboard App**
+> - #### Developed by Andrew Weith
+> - #### __MERN (MongoDB, Express, React, Node), Material-UI__
+
+---
+
+<br/>
+
+#### Whiteboard is a Chat Server application focused on providing an environment for school classrooms to operate remotely.
+
+- Whiteboard is still very much **IN DEVELOPMENT**, so many of the features required to achieve this goal are still unimplemented or being developed.
+
+- This project began as a team project for a Software Engineering course, but I have continued development independently. The few  segments of code that were contributed by members of that team are credited as such in comments.
+
+<br/>
+
+---
+
+## **Sign Up For Whiteboard**
+
+![Intro](Demo/intro.gif)
+
+## **Home Page**
+
+![Home](Demo/home.gif)
+
+## **Chat Room**
+
+- ### Working
+![Chat](Demo/chat.gif)
+
+- ### Dev
+![Dev-Chat](Demo/dev_chat.gif)
+
+<br/>
+
+---
+
+## **Attributions**
+
+* Small code segments expand on the contributions of Connor Walsh and Alec Comley.
+
+* Websocket Chat Window components obtained from (https://github.com/bitlabstudio/blogpost-react-websocket-chat).
+
+* In-Dev ChatRoom component adapted from (https://github.com/gregnb/material-ui-chat).
+
+* Some Routing code adapted from (https://serverless-stack.com/) and (https://github.com/AnomalyInnovations/serverless-stack-demo-client/blob/master/src/components/AppliedRoute.js)
+
+* Drawer adapted from examples at https://material-ui.com/components/drawers/
+
+<br/>
+
+<br/>
+
+<br/>
+
+---
+
+## **CREATE REACT APP - INSTRUCTIONS**
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-Chat Window components obtained from [here](https://github.com/bitlabstudio/blogpost-react-websocket-chat).
 
 ## Available Scripts
 

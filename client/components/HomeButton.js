@@ -1,5 +1,3 @@
-/* Created and written by Andrew Weith */
-
 import React from "react";
 import Button from '@material-ui/core/Button';
 import Home from '@material-ui/icons/Home';

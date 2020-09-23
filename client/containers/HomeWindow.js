@@ -1,4 +1,4 @@
-/* Created and written by Andrew Weith */
+
 /* Drawer and navbar created using example code provided by https://material-ui.com/components/drawers/ */
 
 import React, {useState} from 'react';

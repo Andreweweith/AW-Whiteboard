@@ -205,6 +205,15 @@ const useStyles = makeStyles(theme => ({
         paddingLeft: '95%',
         //marginLeft: theme.spacing(20),
         //padding: theme.spacing(10),
+    },
+    menuGridItem: {
+        marginRight: '-15px'
+    },
+    titleGridItem: {
+        marginLeft: '-15px'
+    },
+    navButtonsGridItem: {
+        marginLeft: '20px'
     }
 }));
 
@@ -243,23 +252,43 @@ function HomeWindow(props) {
                         })}
                     >
                         <Toolbar>
-                            <IconButton
-                                color="secondary"
-                                aria-label="open drawer"
-                                onClick={handleDrawerOpen}
-                                edge="start"
-                                className={clsx(classes.menuButton, {
-                                    [classes.hide]: open,
-                                })}
-                            >
-                                <MenuIcon />
-                            </IconButton>
-                            <Typography variant='title' color='secondary'>
-                                <Box fontWeight='bold' letterSpacing={8}>WHITEBOARD</Box>
-                                <Typography variant='subtitle2' color='secondary'>
-                                    <Box fontStyle='italic' fontSize={12}>"It's not Blackboard"</Box>
-                                </Typography>
-                            </Typography>
+                            <Grid container alignItems={'center'}>
+                                <Grid item xs={1} className={classes.menuGridItem}>
+                                    <IconButton
+                                        color="secondary"
+                                        aria-label="open drawer"
+                                        onClick={handleDrawerOpen}
+                                        edge="start"
+                                        className={clsx(classes.menuButton, {
+                                            [classes.hide]: open,
+                                        })}
+                                    >
+                                        <MenuIcon />
+                                    </IconButton>
+                                </Grid>
+                                <Grid item alignContent={'flex-start'} xs={10} className={classes.titleGridItem}>
+                                    <Typography variant='title' color='secondary'>
+                                        <Box fontWeight='bold' letterSpacing={8}>WHITEBOARD</Box>
+                                        <Typography variant='subtitle2' color='secondary'>
+                                            <Box fontStyle='italic' fontSize={12}>"It's not Blackboard"</Box>
+                                        </Typography>
+                                    </Typography>
+                                </Grid>
+                                <Grid item alignContent={'flex-end'} xs={1} className={classes.navButtonsGridItem}>
+                                    <Grid container direction='row' xs={12}>
+                                        <Grid item xs={6}>
+                                            <Home> </Home>
+                                        </Grid>
+                                        <Grid item xs={6}>
+                                            <AccountButton> </AccountButton>
+                                        </Grid>
+
+                                    </Grid>
+                                </Grid>
+
+
+                            </Grid>
+
                         </Toolbar>
                     </AppBar>
                 </Grid>
@@ -335,7 +364,7 @@ function HomeWindow(props) {
                                 {/*))}*/}
                             </List>
                             <Divider />
-                            <Grid container direction='row' xs={2}
+                            {/*<Grid container direction='row' xs={2}
                                   alignContent={'center'}
                                   justify={'flex-end'}
                                   className={classes.navButtons}>
@@ -343,7 +372,7 @@ function HomeWindow(props) {
                                     <Home> </Home>
                                     <AccountButton> </AccountButton>
                                 </Grid>
-                            </Grid>
+                            </Grid>*/}
                         </Drawer>
                     </Grid>
 

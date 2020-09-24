@@ -19,21 +19,52 @@ import Teal from "@material-ui/core/colors/teal";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import PropTypes from "prop-types";
+import Box from "@material-ui/core/Box";
+import grey from "@material-ui/core/colors/grey";
+import teal from "@material-ui/core/colors/teal";
 
 /* SOURCE: https://github.com/gregnb/material-ui-chat/blob/feature/prototype/src/ChatRoom.js */
 
 const peopleStyles = theme => ({
     root: {
         overflowY: 'scroll',
+        overflowX: 'hidden',
         height: '100%',
         '&::-webkit-scrollbar': {
             width: '5px',
             height: '8px',
-            backgroundColor: '#FFF'
+            backgroundColor: 'rgba(103,120,129,0.0)',
+            //backgroundColor: '#FFF'
         },
         '&::-webkit-scrollbar-thumb': {
-            backgroundColor: '#025279' //'#23232F' //'#0595DD'
+            backgroundColor: /*'#025279'*/ '#23232F' /*'#0595DD'*/
         },
+    },
+    avatarList: {
+        backgroundColor: 'rgba(35,35,47,0.8)',
+        borderTopLeftRadius: '12px',
+        borderBottomLeftRadius: '12px',
+        borderTopRightRadius: '12px',
+        borderBottomRightRadius: '12px',
+        marginTop: '6px',
+        marginBottom: '6px',
+        width: '95%',
+        minWidth: '180px',
+        maxWidth: '215px',
+        //marginRight: '0px',
+        marginLeft: '7px'
+    },
+    peopleName: {
+        color: teal['A200']
+    },
+    peopleListHeader: {
+        width: '100%',
+        padding: '10px',
+        paddingLeft: '20px'
+    },
+    divider: {
+        height: '6px',
+        backgroundColor: grey['800']
     }
 });
 
@@ -44,10 +75,15 @@ class PeopleList extends React.Component {
         const { classes } = this.props;
 
         let images = [
-            { name: 'James Roberts', avatar: 'https://randomuser.me/api/portraits/men/61.jpg' },
-            { name: 'Andy Brown', avatar: 'https://randomuser.me/api/portraits/men/62.jpg' },
-            { name: 'Peter Smith', avatar: 'https://randomuser.me/api/portraits/men/63.jpg' },
-            { name: 'Jennifer Todd', avatar: 'https://randomuser.me/api/portraits/women/60.jpg' }
+            { name: 'Rob Boberts', avatar: 'https://randomuser.me/api/portraits/men/37.jpg' },
+            { name: 'Jason Gilbert', avatar: 'https://randomuser.me/api/portraits/men/93.jpg' },
+            { name: 'Jeffrey Hill', avatar: 'https://randomuser.me/api/portraits/men/54.jpg' },
+            { name: 'Ramona Harris', avatar: 'https://randomuser.me/api/portraits/women/82.jpg' },
+            { name: 'Todd Howard', avatar: 'https://randomuser.me/api/portraits/men/63.jpg' },
+            { name: 'Bob Loblaw', avatar: 'https://randomuser.me/api/portraits/men/19.jpg' },
+            { name: 'Noah Silva', avatar: 'https://randomuser.me/api/portraits/men/6.jpg' },
+            { name: 'Sara Smith', avatar: 'https://randomuser.me/api/portraits/women/29.jpg' },
+            { name: 'Paula Soto', avatar: 'https://randomuser.me/api/portraits/women/1.jpg' },
         ];
 
         /*for (let i = 0; i < 5; i++) {
@@ -55,12 +91,28 @@ class PeopleList extends React.Component {
         }*/
 
         return (
-            <List className={classes.root}>
+            <List container className={classes.root} alignContent={'flex-end'} justifyContent={'flex-end'} direction={'row'}>
+                <Grid container alignContent={'center'} justifyContent={'center'} className={classes.peopleListHeader}>
+                    <Grid item xs={12} alignContent={'center'}>
+                        <Typography variant='title' className={classes.chatTitle} color='secondary'>
+                            <Box fontWeight='bold' letterSpacing={6}>MEMBERS</Box>
+                        </Typography>
+                    </Grid>
+                </Grid>
+
+                <Divider className={classes.divider} />
+
                 {images.map((item, index) => (
                     <React.Fragment>
-                        <ListItem key={index} dense button>
-                            <Avatar alt='Remy Sharp' src={item.avatar} />
-                            <ListItemText primary={item.name} />
+                        <ListItem key={index} dense button className={classes.avatarList}>
+                            <Grid container alignItems={"center"}  spacing={6}>
+                                <Grid item xs={3} justify={"left"}>
+                                    <Avatar alt='Remy Sharp' src={item.avatar} />
+                                </Grid>
+                                <Grid item xs={9} alignContent={"center"}>
+                                    <ListItemText className={classes.peopleName} primary={item.name} />
+                                </Grid>
+                            </Grid>
                         </ListItem>
                         {index !== images.length-1 && <Divider key={index} />}
                     </React.Fragment>
@@ -101,7 +153,15 @@ const chatTextStyles = (theme) => ({
         marginTop: '16px'
     },
     composeInput: {
-        padding: '16px'
+        padding: '16px',
+        '&::-webkit-scrollbar': {
+            width: '8px',
+            height: '12px',
+            backgroundColor: 'rgba(103,120,129,0.4)'
+        },
+        '&::-webkit-scrollbar-thumb': {
+            backgroundColor: /*'#025279'*/ '#23232F' //'#0595DD'
+        },
     },
     sendIcon: {
         color: '#2196f3'
@@ -131,10 +191,10 @@ class ChatText extends React.Component {
         const { classes } = this.props;
 
         let images = [
-            { name: 'James Roberts', avatar: 'https://randomuser.me/api/portraits/men/61.jpg', message: 'Can anyone help me out?' },
-            { name: 'Andy Brown', avatar: 'https://randomuser.me/api/portraits/men/62.jpg', message: 'Sure, what is wrong?' },
-            { name: 'Peter Smith', avatar: 'https://randomuser.me/api/portraits/men/63.jpg', message: 'Does anyone know a good plumber?' },
-            { name: 'Jennifer Todd', avatar: 'https://randomuser.me/api/portraits/women/60.jpg', message: 'Hi everyone' }
+            { name: 'Ramona Harris', avatar: 'https://randomuser.me/api/portraits/women/82.jpg', message: 'Welcome to Whiteboard!' },
+            { name: 'Bob Loblaw', avatar: 'https://randomuser.me/api/portraits/men/19.jpg', message: 'Oh hey, thanks!' },
+            { name: 'Jeffrey Hill', avatar: 'https://randomuser.me/api/portraits/men/54.jpg', message: 'How do I leave this chat room...?' },
+            { name: 'Sara Smith', avatar: 'https://randomuser.me/api/portraits/women/29.jpg', message: 'Why would you want to leave? This website uses a dark theme everywhere!' }
         ];
 
         /*for (let i = 0; i < 5; i++) {
@@ -163,7 +223,7 @@ class ChatText extends React.Component {
                     </div>
                 </Paper>
                 <Paper className={classes.composeInputPaper} elevation={4}>
-                    <Input classes={{ root: classes.composeInput }} multiline={true} fullWidth={true} disableUnderline={true} placeholder={"Send a message!"}
+                    <Input classes={{ root: classes.composeInput }} multiline={true} rows={1} rowsMax={2} fullWidth={true} disableUnderline={true} placeholder={"Enter a message..."}
                            endAdornment={
                                 <IconButton>
                                     <SendIcon className={classes.searchIcon} />
@@ -187,7 +247,7 @@ const chatToolbarStyles = theme => ({
         color: '#FFF',
         margin: '8px',
         minHeight: '32px',
-        backgroundColor: /*'#0377ad',*/ /*'#0595DD',*/ 'rgba(35,35,47,0.8)',
+        backgroundColor: /*'#0377ad',*/ /*'#0595DD',*/ 'rgba(26,26,34,0.8)',
         borderRadius: '2px'
     },
     innerContent: {
@@ -229,8 +289,8 @@ class ChatToolbar extends React.Component {
 
         return (
             <Toolbar disableGutters={true} className={classes.chatToolbarRoot}>
-                <Typography variant="title" className={classes.chatTitle} color="inherit">
-                    Now talking in "Wonderful Chatroom"
+                <Typography variant='title' className={classes.chatTitle} color='secondary'>
+                    <Box fontWeight='bold' letterSpacing={6}>WELCOME TO WHITEBOARD</Box>
                 </Typography>
                 <Input classes={{ root: classes.searchWrapper, input: classes.searchInput }} disableUnderline={true} placeholder={"Search"}
                        endAdornment={<SearchIcon className={classes.searchIcon} />}
@@ -250,19 +310,28 @@ ChatToolbar = withStyles(chatToolbarStyles)(ChatToolbar);
 const styles = theme => ({
     root: {
         margin: '16px',
-        height: 'calc(100vh - 32px)',
-        //padding: theme.spacing(5),
+        height: 'calc(100vh - 64px)',
+        //padding: '16px',
+
     },
     paper: {
         height: '80vh',
         width: '70vw',
         marginTop: '5%',
+
     },
     gridContainer: {
-        height: 'inherit'
+        height: 'inherit',
+        backgroundColor: 'rgb(54,55,59)',
+        paddingRight: '6px',
+        paddingTop: '2px',
+        paddingBottom: '2px',
+        paddingLeft: '10px'
     },
     gridItem: {
-        height: '100%'
+        height: '100%',
+
+
     },
     '@global': {
         'body': {

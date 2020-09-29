@@ -27,7 +27,7 @@
 - ### Working Chat
 ![Chat](Demo/chat.gif)
 
-- ### In-Dev Chat - No Functionality Yet
+- ### In-Dev Chat - WIP
 ![Dev-Chat](Demo/dev_chat.gif)
 
 <br/>

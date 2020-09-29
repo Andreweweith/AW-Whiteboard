@@ -24,10 +24,10 @@
 
 ## **Chat Room**
 
-- ### Working
+- ### Working Chat
 ![Chat](Demo/chat.gif)
 
-- ### Dev
+- ### In-Dev Chat - No Functionality Yet
 ![Dev-Chat](Demo/dev_chat.gif)
 
 <br/>
@@ -44,7 +44,7 @@
 
 * Some Routing code adapted from (https://serverless-stack.com/) and (https://github.com/AnomalyInnovations/serverless-stack-demo-client/blob/master/src/components/AppliedRoute.js)
 
-* Drawer adapted from examples at https://material-ui.com/components/drawers/
+* Drawer adapted from examples at (https://material-ui.com/components/drawers/)
 
 <br/>
 

@@ -8,7 +8,7 @@
 
 - Whiteboard is still very much **IN DEVELOPMENT**, so many of the features required to achieve this goal are still unimplemented or being developed.
 
-- This project began as a team project for a Software Engineering course, but I have continued development independently. The few  segments of code that were contributed by members of that team are credited as such in comments.
+- This project began as a team project for a Software Engineering course, and is being continued independently. 
 
 <br/>
 
@@ -36,7 +36,7 @@
 
 ## **Attributions**
 
-* Small code segments expand on the contributions of Connor Walsh and Alec Comley.
+* Developed from a group project with Connor Walsh and Alec Comley.
 
 * Websocket Chat Window components obtained from (https://github.com/bitlabstudio/blogpost-react-websocket-chat).
 

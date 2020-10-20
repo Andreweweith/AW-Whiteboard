@@ -6,9 +6,9 @@
 
 #### Whiteboard is a chat server focused on providing an environment for school classrooms to operate remotely.
 
-- Whiteboard is still very much **IN DEVELOPMENT**, so many of the features required to achieve this goal are still unimplemented or being developed.
+- This project began as a team project for a Software Engineering course, and has been continued independently. 
 
-- This project began as a team project for a Software Engineering course, and is being continued independently. 
+- In-Development.
 
 <br/>
 
